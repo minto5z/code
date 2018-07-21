@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\MahadiurJaman\.android\build-cache\432d0d4e25903664038cf3106f421f7bfce81476\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bef8a6e9c48d173c5507cf734637b0726dc3afb1">
+        <dex dex="C:\Users\MahadiurJaman\Downloads\Compressed\blue\blue\Bluenevigation\app\build\intermediates\pre-dexed\debug\classes_be3395970dcc9ba35237520acc7e3d4c61eeaa11.jar" />
+    </item>
+
+</items>
