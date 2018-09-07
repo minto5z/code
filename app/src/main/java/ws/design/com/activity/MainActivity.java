@@ -185,7 +185,6 @@ public class MainActivity extends AppCompatActivity {
                             wThreshold.add(new Entry(i,warningThreshold));
                             timestream.add(mPoints.get(i).getTimestamp().toString());
                         }
-                        //Log.d("AnswersPresenter", "---------------------" + mPoints.get(j).getAxis_value().getX() + "---------------------");
                         if(j==0)setData(xValue,yValue,zValue,graphName,aThreshold,wThreshold,timestream,mPoints.size());
                         else setData1(xValue,yValue,zValue,graphName,aThreshold,wThreshold,timestream,mPoints.size());
                     }
@@ -199,9 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<SOAnswersResponse> call, Throwable t) {
-                //showErrorMessage();
                 Log.d("AnswersPresenter", "error loading from API");
-
             }
         });
     }
@@ -349,7 +346,6 @@ public class MainActivity extends AppCompatActivity {
         set1.setLineWidth(1.5f);
         set1.setDrawCircles(false);
         set1.setDrawValues(false);
-        //set1.setDrawFilled(true);
         set1.setFillAlpha(65);
         set1.setFillColor(ColorTemplate.getHoloBlue());
         set1.setHighLightColor(Color.rgb(244, 117, 117));
@@ -362,7 +358,6 @@ public class MainActivity extends AppCompatActivity {
         set2.setLineWidth(1.5f);
         set2.setDrawCircles(false);
         set2.setDrawValues(false);
-        //set2.setDrawFilled(true);
         set2.setFillAlpha(65);
         set2.setFillColor(Color.GREEN);
         set2.setHighLightColor(Color.GREEN);
@@ -375,7 +370,6 @@ public class MainActivity extends AppCompatActivity {
         set3.setLineWidth(1.5f);
         set3.setDrawCircles(false);
         set3.setDrawValues(false);
-        //set3.setDrawFilled(true);
         set3.setFillAlpha(65);
         set3.setFillColor(Color.MAGENTA);
         set3.setHighLightColor(Color.MAGENTA);
@@ -387,13 +381,10 @@ public class MainActivity extends AppCompatActivity {
         set4.setLineWidth(1.5f);
         set4.setDrawCircles(false);
         set4.setDrawValues(false);
-        //set3.setDrawFilled(true);
         set4.setFillAlpha(65);
         set4.setFillColor(Color.RED);
         set4.setHighLightColor(Color.RED);
         set4.setDrawCircleHole(false);
-
-
 
         LineDataSet set5 = new LineDataSet(wThreshold, "Warning");
         set5.setAxisDependency(YAxis.AxisDependency.LEFT);
@@ -402,7 +393,6 @@ public class MainActivity extends AppCompatActivity {
         set5.setLineWidth(1.5f);
         set5.setDrawCircles(false);
         set5.setDrawValues(false);
-        //set3.setDrawFilled(true);
         set5.setFillAlpha(65);
         set5.setFillColor(Color.YELLOW);
         set5.setHighLightColor(Color.YELLOW);
@@ -413,12 +403,10 @@ public class MainActivity extends AppCompatActivity {
         data.setValueTextSize(9f);
 
         mChart.getAxisRight().setEnabled(false);
-        // set data
         mChart.setData(data);
         mChart.setVisibleXRangeMaximum(50);
         mChart.getDescription().setText(name);
         mChart.getDescription().setTextColor(Color.WHITE);
-        //mChart.moveViewToX(data.getEntryCount());
 
 
         Legend l = mChart.getLegend();
@@ -455,12 +443,10 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode) {
             case PICK_FROM_CAMERA:
                 doCrop();
-
                 break;
 
             case PICK_FROM_FILE:
                 mImageCaptureUri = data.getData();
-
                 doCrop();
 
                 break;
@@ -499,14 +485,12 @@ public class MainActivity extends AppCompatActivity {
             return;
         } else {
             intent.setData(mImageCaptureUri);
-
             intent.putExtra("outputX", 200);
             intent.putExtra("outputY", 200);
             intent.putExtra("aspectX", 1);
             intent.putExtra("aspectY", 1);
             intent.putExtra("scale", true);
             intent.putExtra("return-data", true);
-
             if (size == 1) {
                 Intent i = new Intent(intent);
                 ResolveInfo res = list.get(0);
@@ -586,16 +570,4 @@ public class MainActivity extends AppCompatActivity {
             return rowView;
         }
     }
-    /*@Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) {
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);}
-    }*/
 }
