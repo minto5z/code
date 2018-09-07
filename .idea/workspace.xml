@@ -11,10 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e62786f-2590-4b3a-b5a0-8fdf499a53bc" name="Default" comment="second">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ws/design/com/activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/ws/design/com/activity/MainActivity.java" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1947,7 +1945,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="21010e31d524134a" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Android App.app">
